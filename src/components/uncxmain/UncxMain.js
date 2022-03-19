@@ -6,18 +6,18 @@ import Rocket from "../../assets/rocket.svg";
 
 const UncxMain = () => {
   return (
-    <div className="w-9/12 mx-auto">
-      <div className="flex space-x-4 py-20">
+    <div className="md:w-9/12 md:mx-auto">
+      <div className="flex space-x-4 md:py-20">
         <div className="pb-20">
-          <div className="flex items-center">
-            <div className="flex px-10 items-center bg-[#1E2023] py-2 rounded-tl-2xl rounded-bl-2xl space-x-2">
+          <div className="flex items-center mx-4">
+            <div className="flex md:px-10 px-4 items-center bg-[#1E2023] py-2 rounded-tl-2xl rounded-bl-2xl space-x-2">
               <img src={Horse} alt="" className="h-7" />
               <div className="flex space-x-2">
                 <p className="text-white text-[16px] font-[500]">UNCX</p>
                 <p className="text-[#68D67C] text-[16px] font-[500]">$377.06</p>
               </div>
             </div>
-            <div className="flex px-10 items-center bg-[#22272C] py-2 rounded-tr-2xl rounded-br-2xl space-x-2 hover:bg-[#1E2023]">
+            <div className="flex md:px-10 px-4  items-center bg-[#22272C] py-2 rounded-tr-2xl rounded-br-2xl space-x-2 hover:bg-[#1E2023]">
               <img src={BlueHorse} alt="" className="h-7" />
               <div className="flex space-x-2">
                 <p className="text-white text-[16px] font-[500]">UNCL</p>
@@ -28,7 +28,7 @@ const UncxMain = () => {
           {/* barchart */}
         </div>
         {/* right side */}
-        <div className="pt-5 w-6/12 -mt-10">
+        <div className="pt-5 w-6/12 -mt-10 hidden md:inline">
           <div className="text-center pb-5 shadow-2xl bg-[#151617]">
             <p className="text-white text-[16px] font-[400]">
               Unicrypt Service

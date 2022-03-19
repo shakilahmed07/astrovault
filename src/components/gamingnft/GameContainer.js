@@ -34,8 +34,8 @@ const gamingNft = [
 
 const GameContainer = () => {
   return (
-    <div className="w-9/12 mx-auto">
-      <div className="ml-2 py-5">
+    <div className="md:w-9/12 md:mx-auto">
+      <div className="md:ml-2 mx-2 py-5">
         <div className="space-y-2">
           <h3 className="text-white text-[20px] font-[500]">
             Recent Gaming, NFT, and Other Launches
@@ -44,7 +44,7 @@ const GameContainer = () => {
             Profit shown as ATH
           </p>
         </div>
-        <div className="columns-4 py-5">
+        <div className="md:columns-4 columns-2 py-5 p-2">
             {
                 gamingNft.map((item) => (
                 <GameCard key={item} images={item.images} title={item.title} price={item.price} />

@@ -1,6 +1,6 @@
 const PresalesCard = ({ images, title, day, price }) => {
   return (
-    <div className="py-5">
+    <div className="py-4">
       <div className="flex flex-col items-center">
         <img
           src={images}

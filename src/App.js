@@ -12,17 +12,17 @@ function App() {
   return (
     <main className='bg-[#151617]'>
       {/* container */}
-      <div className="py-10">
+      <div className="md:py-10 py-5">
         {/* Total Value */}
-        <div className="flex items-center justify-around">
-          <div className="flex items-center justify-center">
-            <BsPentagon className="text-[#68D67C] mr-2 text-[36px] font-extrabold h-8 -mt-2" />
+        <div className="flex md:flex-row flex-col-reverse md:items-center md:justify-around">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-center text-center items-center mt-5">
+          <BsPentagon className="text-[#68D67C] mr-2 text-[36px] font-extrabold h-8 -mt-2" />
             <p className="text-[#68D67C] text-[20px] font-[700]">$487,654,798</p>
-            <span className="text-[#b9babb] mx-1">-</span>
+            <span className="text-[#b9babb] mx-1 hidden md:inline">-</span>
             <p className="text-[#b9babb] text-[12px] font-[400]">Total Value locked across all AMMS</p>
           </div>
           {/* right side */}
-          <div className="text-white flex space-x-2">
+          <div className="text-white flex items-center justify-center space-x-2">
             <div className="flex items-center">
               <img src={Square} alt="" className="h-5 mr-2" />
               <p className="text-[12px] font-[500] text-[#b9babb]">$654.45</p>
@@ -42,10 +42,10 @@ function App() {
         </div>
       </div>
       {/* UNCX Staking */}
-      <div className="w-9/12 mx-auto">
-        <div className="flex items-center bg-[#1E2023] py-5 rounded-3xl ml-2 pl-4">
+      <div className="md:w-9/12 md:mx-auto">
+        <div className="flex items-center bg-[#1E2023] md:py-5 py-4 rounded-3xl md:ml-2 mx-2 pl-4">
           <img src={Hourse} alt="" className="h-[30px] mr-2" />
-          <p className="text-[#b9babb] text-[16px]">Earn fees from our ecosystem with <span className="text-[#68D67C] cursor-pointer">UNCX staking</span></p>
+          <p className="text-[#b9babb] md:text-[16px] text-xs">Earn fees from our ecosystem with <span className="text-[#68D67C] cursor-pointer">UNCX staking</span></p>
         </div>
       </div>
       {/* Component */}
