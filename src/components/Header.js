@@ -7,7 +7,7 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <header className="bg-[#1E2023] h-[80px] grid grid-cols-[250px_1fr_300px] items-center justify-center px-4 top-0 sticky">
+    <header className="bg-[#1E2023] h-[80px] grid grid-cols-[250px_1fr_300px] items-center justify-center px-4 top-0 sticky z-[99]">
       {/* logo */}
       <div className="w-[220px] cursor-pointer">
         <img src={uniCrypt} alt="" />
