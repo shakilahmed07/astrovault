@@ -3,6 +3,9 @@ import { BsPentagon } from "react-icons/bs";
 import Etherium from "./assets/etherium.png"
 import Bitcoin from "./assets/bitcoin.png"
 import Square from "./assets/square.png"
+import Hourse from "./assets/hourse.svg"
+import GameContainer from "./components/gamingnft/GameContainer";
+import PresalesContainer from "./components/presales/PresalesContainer";
 
 function App() {
   return (
@@ -37,6 +40,17 @@ function App() {
           </div>
         </div>
       </div>
+      {/* UNCX Staking */}
+      <div className="w-9/12 mx-auto">
+        <div className="flex items-center bg-[#1E2023] py-5 rounded-3xl ml-2 pl-4">
+          <img src={Hourse} alt="" className="h-[30px] mr-2" />
+          <p className="text-[#b9babb] text-[16px]">Earn fees from our ecosystem with <span className="text-[#68D67C] cursor-pointer">UNCX staking</span></p>
+        </div>
+      </div>
+      {/* Game Container Component */}
+      <GameContainer />
+      {/* presales component */}
+      <PresalesContainer />
     </main>
   );
 }
