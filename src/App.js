@@ -6,10 +6,11 @@ import Square from "./assets/square.png"
 import Hourse from "./assets/hourse.svg"
 import GameContainer from "./components/gamingnft/GameContainer";
 import PresalesContainer from "./components/presales/PresalesContainer";
+import UncxMain from "./components/uncxmain/UncxMain";
 
 function App() {
   return (
-    <main className='bg-[#151617] h-screen'>
+    <main className='bg-[#151617]'>
       {/* container */}
       <div className="py-10">
         {/* Total Value */}
@@ -47,10 +48,10 @@ function App() {
           <p className="text-[#b9babb] text-[16px]">Earn fees from our ecosystem with <span className="text-[#68D67C] cursor-pointer">UNCX staking</span></p>
         </div>
       </div>
-      {/* Game Container Component */}
+      {/* Component */}
       <GameContainer />
-      {/* presales component */}
       <PresalesContainer />
+      <UncxMain />
     </main>
   );
 }
