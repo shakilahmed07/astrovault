@@ -4,7 +4,7 @@ const GameCard = ({ images, title, price }) => {
       <div className="flex flex-col items-center justify-center py-5 space-y-1">
         <img src={images} alt="" className="h-20" />
         <p className="text-[16px] font-[400] text-white">{title}</p>
-        <p className="text-[16px] font-[700] text-[#68d67c]">{price}X</p>
+        <p className="text-[16px] font-[700] text-purple-700">{price} ATH</p>
       </div>
     </div>
   );

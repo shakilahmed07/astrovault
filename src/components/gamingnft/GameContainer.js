@@ -40,7 +40,7 @@ const GameContainer = () => {
           <h3 className="text-white text-[20px] font-[500]">
             Recent Gaming, NFT, and Other Launches
           </h3>
-          <p className="text-[#68D67C] text-[12px] font-[400]">
+          <p className="text-purple-700 text-[12px] font-[400]">
             Profit shown as ATH
           </p>
         </div>

@@ -56,7 +56,7 @@ const presales = [
 const PresalesContainer = () => {
   return (
     <div class className="md:w-9/12 md:mx-auto">
-      <div className="flex items-center hover:bg-[#1E2023] md:w-4/12 rounded-full px-4 py-2 cursor-pointer">
+      <div className="flex items-center hover:bg-[#1E2023] md:w-8/12 rounded-full px-4 py-2 cursor-pointer">
         <h3 className="text-white md:text-[20px] font-[500] mr-1">
           Upcoming Pancakeswap Presales
         </h3>
