@@ -4,6 +4,7 @@ import { MdLocalFireDepartment } from "react-icons/md";
 import { RiUserShared2Line } from "react-icons/ri";
 import { BiSun } from "react-icons/bi";
 import { FaTelegramPlane } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -16,18 +17,31 @@ const Header = () => {
       <div className="flex items-center text-[14px] text-white space-x-4">
         <div className="md:flex items-center bg-[#454649] px-[16px] py-2 rounded-full hidden">
           <MdLocalFireDepartment />
+          <Link to="/">
           <p className="ml-2 cursor-pointer">DASHBOARD</p>
+          </Link>
+          
         </div>
         <div className="hover:bg-[#454649] px-[16px] py-2 rounded-full cursor-pointer hidden md:inline">
+          <Link to="/browser">
           <p>BROWSER</p>
+          </Link>
+          
         </div>
-        <p className="hover:bg-[#454649] px-[16px] py-2 rounded-full cursor-pointer hidden md:inline">
+        <Link to="/services">
+        <p className="hover:bg-[#c1d0fc] px-[16px] py-2 rounded-full cursor-pointer hidden md:inline">
           SERVICES
         </p>
+        </Link>
+        
         <div className="hover:bg-[#454649] px-[16px] py-2 rounded-full cursor-pointer hidden md:inline">
           {/* icon */}
+          <Link to="/farms">
           <p>FARMS</p>
+          </Link>
         </div>
+       
+        
         <p className="hover:bg-[#454649] px-[16px] py-2 rounded-full cursor-pointer hidden md:inline">DOCS</p>
         <div className="hover:bg-[#454649] px-4 py-2 rounded-full cursor-pointer">
           <FaTelegramPlane className="h-6 w-6" />

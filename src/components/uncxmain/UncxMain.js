@@ -10,7 +10,7 @@ import LocksCard from "./LocksCard";
 const UncxMain = () => {
   return (
     <div className="md:w-9/12 md:mx-auto">
-      <div className="flex space-x-4 md:py-20">
+      <div className="flex space-x-4 md:pt-20">
         <div className="pb-20">
           <div className="flex items-center mx-4">
             <div className="flex md:px-10 px-4 items-center bg-[#1E2023] py-2 rounded-tl-2xl rounded-bl-2xl space-x-2">
