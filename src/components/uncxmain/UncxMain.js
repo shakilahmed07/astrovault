@@ -4,6 +4,8 @@ import DocLock from "../../assets/doc-lock.svg";
 import Token from "../../assets/token.svg";
 import Rocket from "../../assets/rocket.svg";
 import PerformingCard from "./PerformingCard";
+import { IoMdLock } from "react-icons/io";
+import LocksCard from "./LocksCard";
 
 const UncxMain = () => {
   return (
@@ -15,7 +17,9 @@ const UncxMain = () => {
               <img src={Horse} alt="" className="h-7" />
               <div className="flex space-x-2">
                 <p className="text-white text-[16px] font-[500]">UNCX</p>
-                <p className="text-purple-700 text-[16px] font-[500]">$377.06</p>
+                <p className="text-purple-700 text-[16px] font-[500]">
+                  $377.06
+                </p>
               </div>
             </div>
             <div className="flex md:px-10 px-4  items-center bg-[#22272C] py-2 rounded-tr-2xl rounded-br-2xl space-x-2 hover:bg-[#1E2023]">
@@ -29,11 +33,28 @@ const UncxMain = () => {
           {/* barchart */}
           {/* right div */}
           <div className="py-5">
-            <p className="text-white text-center font-[600] text-[20px] mb-2">Recent Top performing ILO's</p>
+            <p className="text-white text-center font-[600] text-[20px] mb-2">
+              Recent Top performing ILO's
+            </p>
             {/* component */}
             <PerformingCard />
             <PerformingCard />
             <PerformingCard />
+          </div>
+
+          {/* New Liquidity Locks */}
+          <div className="py-5">
+            <div className="text-white flex flex-col md:flex-row items-center md:items-center font-[400] text-[16px] bg-black/30 py-4 space-x-2 pl-2">
+              <IoMdLock />
+              <p>New Liquidity Locks (>100k)</p>
+            </div>
+            {/* component */}
+            <LocksCard />
+            <LocksCard />
+            <LocksCard />
+            <LocksCard />
+            <LocksCard />
+            <LocksCard />
           </div>
         </div>
         {/* right side */}
@@ -49,52 +70,69 @@ const UncxMain = () => {
           {/* first one */}
           <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-700">
             <div className="mr-2 p-2">
-            <img src={DocLock} alt="" className="h-10" />
+              <img src={DocLock} alt="" className="h-10" />
             </div>
             <div>
               <p className="text-white text-[16px] font-[400]">Documentation</p>
-              <p className="text-[#b9babb] text-[12px] font-[400]">Read about all of our services</p>
+              <p className="text-[#b9babb] text-[12px] font-[400]">
+                Read about all of our services
+              </p>
             </div>
           </div>
           {/* second */}
           <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-700">
             <div className="mr-2 p-2">
-            <img src={DocLock} alt="" className="h-10" />
+              <img src={DocLock} alt="" className="h-10" />
             </div>
             <div>
-              <p className="text-white text-[16px] font-[400]">Liquidity Locker</p>
-              <p className="text-[#b9babb] text-[12px] font-[400]">Lock Liquidity tokens</p>
+              <p className="text-white text-[16px] font-[400]">
+                Liquidity Locker
+              </p>
+              <p className="text-[#b9babb] text-[12px] font-[400]">
+                Lock Liquidity tokens
+              </p>
             </div>
           </div>
           {/* third */}
           <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-700">
             <div className="mr-2 p-2">
-            <img src={DocLock} alt="" className="h-10" />
+              <img src={DocLock} alt="" className="h-10" />
             </div>
             <div>
               <p className="text-white text-[16px] font-[400]">Token Locker</p>
-              <p className="text-[#b9babb] text-[12px] font-[400]">Lock your ERC20 team tokens</p>
-              <p className="text-[#b9babb] text-[12px] font-[400]">send tokens to someone else that are locked for a configurable</p>
+              <p className="text-[#b9babb] text-[12px] font-[400]">
+                Lock your ERC20 team tokens
+              </p>
+              <p className="text-[#b9babb] text-[12px] font-[400]">
+                send tokens to someone else that are locked for a configurable
+              </p>
             </div>
           </div>
           {/* four */}
           <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-700">
             <div className="mr-2 p-2">
-            <img src={Token} alt="" className="h-10" />
+              <img src={Token} alt="" className="h-10" />
             </div>
             <div>
               <p className="text-white text-[16px] font-[400]">TOken Minter</p>
-              <p className="text-[#b9babb] text-[12px] font-[400]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nulla esse officia, porro facilis consectetur!</p>
+              <p className="text-[#b9babb] text-[12px] font-[400]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+                nulla esse officia, porro facilis consectetur!
+              </p>
             </div>
           </div>
           {/* five */}
           <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4">
             <div className="mr-2 p-2">
-            <img src={Rocket} alt="" className="h-10" />
+              <img src={Rocket} alt="" className="h-10" />
             </div>
             <div>
               <p className="text-white text-[16px] font-[400]">LaunchPad</p>
-              <p className="text-[#b9babb] text-[12px] font-[400]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam harum ratione totam consectetur laborum, culpa fugiat ipsum pariatur minima facilis.</p>
+              <p className="text-[#b9babb] text-[12px] font-[400]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                harum ratione totam consectetur laborum, culpa fugiat ipsum
+                pariatur minima facilis.
+              </p>
             </div>
           </div>
         </div>
