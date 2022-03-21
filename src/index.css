@@ -16,3 +16,8 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-tabs .nav-link.active {
+  color: #ffc107 !important;
+  border-color: #ffc107;
+}
