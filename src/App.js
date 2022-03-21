@@ -5,8 +5,8 @@ import NotFound from "./pages/NotFound/NotFound";
 import Services from "./pages/Services/Services";
 import Farms from "./pages/Farms/Farms";
 import Browser from "./pages/Browser/Browser";
-import Launchpad from "./components/launchpad/Launchpad";
 import LaunchpadDetails from "./components/launchpad/LaunchpadDetails";
+import Minter from "./components/launchpad/Minter";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/browser" element={<Browser />} />
         <Route path="/services/*" element={<Services />} />
-        <Route path="/services/:Id" element={<Launchpad />} />
+        <Route path="/services/minter" element={<Minter />} />
         <Route path="/services/launchpad/:Id" element={<LaunchpadDetails />} />
         <Route path="/farms" element={<Farms />} />
 
