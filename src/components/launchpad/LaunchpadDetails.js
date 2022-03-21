@@ -2,107 +2,6 @@ import Etherium from "../../assets/etherium.png";
 const LaunchpadDetails = () => {
   return (
     <div className="bg-[#151617] h-screen">
-      <div>
-        {/* ul */}
-        <ul
-          className="
-            w-4/12 mx-auto
-  nav nav-tabs nav-justified
-  flex flex-col
-  md:flex-row
-  flex-wrap
-  list-none
-  border-b-0
-  pl-0
-  mb-4
-"
-          id="tabs-tabJustify"
-          role="tablist"
-        >
-          <li className="nav-item flex-grow text-center" role="presentation">
-            <a
-              href="#tabs-homeJustify"
-              className="
-      nav-link
-      w-full
-      block
-      font-medium
-      text-xs
-      leading-tight
-      uppercase
-      
-      px-6
-      py-3
-      my-2
-      
-      active
-    "
-              id="tabs-home-tabJustify"
-              data-bs-toggle="pill"
-              data-bs-target="#tabs-homeJustify"
-              role="tab"
-              aria-controls="tabs-homeJustify"
-              aria-selected="true"
-            >
-              Services
-            </a>
-          </li>
-          <li className="nav-item flex-grow text-center" role="presentation">
-            <a
-              href="#tabs-profileJustify"
-              className="
-      nav-link
-      w-full
-      block
-      font-medium
-      text-xs
-      leading-tight
-      uppercase
-      
-      px-6
-      py-3
-      my-2
-      
-    "
-              id="tabs-profile-tabJustify"
-              data-bs-toggle="pill"
-              data-bs-target="#tabs-profileJustify"
-              role="tab"
-              aria-controls="tabs-profileJustify"
-              aria-selected="false"
-            >
-              Minter
-            </a>
-          </li>
-          <li className="nav-item flex-grow text-center" role="presentation">
-            <a
-              href="#tabs-messagesJustify"
-              className="
-      nav-link
-      w-full
-      block
-      font-medium
-      text-xs
-      leading-tight
-      uppercase
-     
-      px-6
-      py-3
-      my-2
-      
-    "
-              id="tabs-messages-tabJustify"
-              data-bs-toggle="pill"
-              data-bs-target="#tabs-messagesJustify"
-              role="tab"
-              aria-controls="tabs-messagesJustify"
-              aria-selected="false"
-            >
-              Launchpad
-            </a>
-          </li>
-        </ul>
-        {/* ul end*/}
         <div className="w-10/12 mx-auto">
           <div className="flex justify-between pt-10">
             <div className="w-5/12 mx-auto text-center">
@@ -146,7 +45,6 @@ const LaunchpadDetails = () => {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 };
