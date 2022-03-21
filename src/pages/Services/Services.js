@@ -196,12 +196,6 @@ const Services = () => {
             >
               {/* middle Minter */}
               <div className="w-10/12 mx-auto">
-                <div className="py-1 mb-2 rounded-full shadow-2xl flex items-center justify-center bg-gray-800 w-2/12 mx-auto">
-                  <img src={Etherium} alt="" className="h-6" />
-                  <p className="text-[16px] font-[400] ml-2 text-white">
-                    Mainnet
-                  </p>
-                </div>
                 <div className="flex justify-between mt-10">
                   <div className="shadow-lg w-5/12 mx-auto">
                     <div className="py-5 shadow-2xl bg-[#1E2023]">
@@ -277,58 +271,7 @@ const Services = () => {
               role="tabpanel"
               aria-labelledby="tabs-profile-tabJustify"
             >
-              {/* launchpad */}
-              <div className="pt-5 w-6/12 -mt-10 hidden md:inline">
-                <div className="py-1 mb-2 rounded-full shadow-2xl flex items-center justify-center bg-gray-800 w-2/12 mx-auto">
-                  <img src={Etherium} alt="" className="h-6" />
-                  <p className="text-[16px] font-[400] ml-2 text-white">
-                    Mainnet
-                  </p>
-                </div>
-                <div className="bg-[#1E2023] pb-10 rounded-2xl shadow-lg w-4/12 mx-auto">
-                  <div className="flex flex-col items-center justify-center py-4">
-                    <img src={Rocket} alt="" className="h-[50px]" />
-                    <p className="text-white text-[16px] font-[400] text-center">
-                      Launchpad
-                    </p>
-                    <p className="text-[#b9babb] text-[12px] font-[400]">
-                      Lock your ERC20 team tokens
-                    </p>
-                  </div>
-                  {/* four */}
-                  <Link to="/services/launchpad">
-                  <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] shadow-2xl rounded-2xl py-2 mx-8 my-2">
-                    <div className="mr-2 p-2">
-                      <img src={WhiteHorse} alt="" className="h-10" />
-                    </div>
-                    <div>
-                      
-                      <p className="text-white text-[16px] font-[400]">
-                        Uniswap V2
-                      </p>
-                      
-                      <p className="text-[#b9babb] text-[12px] font-[400]">
-                        Mainnet
-                      </p>
-                    </div>
-                  </div>
-                  </Link>
-                  {/* five */}
-                  <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] shadow-2xl rounded-2xl py-2 mx-8 my-2">
-                    <div className="mr-2 p-2">
-                      <img src={Drum} alt="" className="h-10" />
-                    </div>
-                    <div>
-                      <p className="text-white text-[16px] font-[400]">
-                        Uniswap V1
-                      </p>
-                      <p className="text-[#b9babb] text-[12px] font-[400]">
-                        Mainnet
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+             {/* adding launchpad */}
             </div>
           </div>
       </div>

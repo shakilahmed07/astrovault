@@ -181,7 +181,7 @@ const Browser = () => {
                       {/* icon */}
                     </div>
                     {/* link add */}
-                    <Link to="/services">
+                    <Link to="/services/launchpad/create">
                     <p className="text-white bg-orange-400 mr-4 rounded-full px-2 cursor-pointer">
                       Create Launch
                     </p>
