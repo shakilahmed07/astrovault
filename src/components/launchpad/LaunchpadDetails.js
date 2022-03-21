@@ -130,7 +130,7 @@ const LaunchpadDetails = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex mt-5 items-center justify-center space-x-2 border-2 rounded-full py-1">
+              <div className="flex mt-5 items-center justify-center space-x-2 border-2 rounded-full py-1 cursor-pointer">
                 <img src={Etherium} alt="" className="h-4" />
                 <p className="text-[#b9babb]">Connect your wallet</p>
               </div>
@@ -139,7 +139,7 @@ const LaunchpadDetails = () => {
             {/* right side connect wallet */}
             <div className="w-5/12 mx-auto">
               <p className="text-[#b9babb] pb-5">Create your presale</p>
-              <div className="flex items-center justify-center space-x-2 border-2 rounded-full py-1 mr-4">
+              <div className="flex items-center justify-center space-x-2 border-2 rounded-full py-1 mr-4 cursor-pointer">
                 <img src={Etherium} alt="" className="h-4" />
                 <p className="text-[#b9babb]">Create your wallet to continue</p>
               </div>

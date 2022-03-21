@@ -124,7 +124,7 @@ const Services = () => {
                   </p>
                 </div>
                 {/* first one */}
-                <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-800">
+                <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-800 cursor-pointer">
                   <div className="mr-2 p-2">
                     <img src={Token} alt="" className="h-10" />
                   </div>
@@ -140,7 +140,7 @@ const Services = () => {
                 </div>
 
                 {/* third */}
-                <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-800">
+                <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-800 cursor-pointer">
                   <div className="mr-2 p-2">
                     <img src={Rocket} alt="" className="h-10" />
                   </div>
@@ -157,7 +157,7 @@ const Services = () => {
                   </div>
                 </div>
                 {/* four */}
-                <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-800">
+                <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-800 cursor-pointer">
                   <div className="mr-2 p-2">
                     <img src={DocLock} alt="" className="h-10" />
                   </div>
@@ -172,7 +172,7 @@ const Services = () => {
                   </div>
                 </div>
                 {/* five */}
-                <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-800">
+                <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-800 cursor-pointer">
                   <div className="mr-2 p-2">
                     <img src={DocLock} alt="" className="h-10" />
                   </div>
@@ -210,7 +210,7 @@ const Services = () => {
                       </p>
                     </div>
                     {/* third */}
-                    <div className="hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-800 pl-5">
+                    <div className=" bg-[#1E2023] py-4 border-b border-gray-800 pl-5">
                       <div>
                         <p className="text-white text-[12px] pr-6 text-justify">
                           NMT tokens are fully ERC20 compliant Non-Mintable
@@ -248,7 +248,7 @@ const Services = () => {
                             Create your own token
                           </p>
                         </div>
-                        <div className="flex items-center justify-center space-x-2 border-2 rounded-full py-1 mr-4">
+                        <div className="flex items-center justify-center space-x-2 border-2 rounded-full py-1 mr-4 cursor-pointer">
                           <img src={Etherium} alt="" className="h-4" />
                           <p className="text-pink-700">Create your own token</p>
                         </div>
@@ -258,12 +258,12 @@ const Services = () => {
 
                   {/* right side connect wallet */}
                   <div className="w-5/12 mx-auto">
-                    <div className="border-2 rounded-full py-1 mr-4 mb-5">
+                    <div className="border-2 rounded-full py-1 mr-4 mb-5 cursor-pointer">
                       <p className="text-[#b9babb] text-center">
                         Create your own token
                       </p>
                     </div>
-                    <div className="flex items-center justify-center space-x-2 border-2 rounded-full py-1 mr-4">
+                    <div className="flex items-center justify-center space-x-2 border-2 rounded-full py-1 mr-4 cursor-pointer">
                           <img src={Etherium} alt="" className="h-4" />
                           <p className="text-pink-700">Create your own token</p>
                         </div>
