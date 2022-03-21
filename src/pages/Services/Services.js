@@ -4,6 +4,7 @@ import Drum from "../../assets/drum.png";
 import WhiteHorse from "../../assets/white-horse.png";
 import Rocket from "../../assets/rocket.svg";
 import Etherium from "../../assets/etherium.png";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -300,9 +301,12 @@ const Services = () => {
                       <img src={WhiteHorse} alt="" className="h-10" />
                     </div>
                     <div>
+                      <Link to="/services/launchpad">
                       <p className="text-white text-[16px] font-[400]">
                         Uniswap V2
                       </p>
+                      </Link>
+                      
                       <p className="text-[#b9babb] text-[12px] font-[400]">
                         Mainnet
                       </p>
