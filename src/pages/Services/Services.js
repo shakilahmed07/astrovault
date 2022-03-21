@@ -296,22 +296,23 @@ const Services = () => {
                     </p>
                   </div>
                   {/* four */}
+                  <Link to="/services/launchpad">
                   <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] shadow-2xl rounded-2xl py-2 mx-8 my-2">
                     <div className="mr-2 p-2">
                       <img src={WhiteHorse} alt="" className="h-10" />
                     </div>
                     <div>
-                      <Link to="/services/launchpad">
+                      
                       <p className="text-white text-[16px] font-[400]">
                         Uniswap V2
                       </p>
-                      </Link>
                       
                       <p className="text-[#b9babb] text-[12px] font-[400]">
                         Mainnet
                       </p>
                     </div>
                   </div>
+                  </Link>
                   {/* five */}
                   <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] shadow-2xl rounded-2xl py-2 mx-8 my-2">
                     <div className="mr-2 p-2">
