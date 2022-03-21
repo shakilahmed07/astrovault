@@ -244,7 +244,7 @@ const Services = () => {
                         </div>
                         <div className="flex items-center justify-center space-x-2 border-2 rounded-full py-1 mr-4 cursor-pointer">
                           <img src={Etherium} alt="" className="h-4" />
-                          <p className="text-pink-700">Create your own token</p>
+                          <p className="text-pink-700">Connect your wallet</p>
                         </div>
                       </div>
                     </div>
@@ -254,13 +254,16 @@ const Services = () => {
                   <div className="w-5/12 mx-auto">
                     <div className="border-2 rounded-full py-1 mr-4 mb-5 cursor-pointer">
                       <p className="text-[#b9babb] text-center">
-                        Create your own token
+                      Connect your wallet
                       </p>
                     </div>
+                    <Link to="/services/launchpad/create">
                     <div className="flex items-center justify-center space-x-2 border-2 rounded-full py-1 mr-4 cursor-pointer">
                           <img src={Etherium} alt="" className="h-4" />
-                          <p className="text-pink-700">Create your own token</p>
+                          <p className="text-pink-700">Launch your own token!</p>
                         </div>
+                    </Link>
+                    
                   </div>
                 </div>
               </div>
