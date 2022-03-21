@@ -134,11 +134,19 @@ const Browser = () => {
             >
               {/* services */}
               <div className="pt-5 w-6/12 -mt-10 hidden md:inline shadow-lg">
-                <div className="py-5 shadow-2xl bg-[#1E2023]">
+                <div className="py-[10px] shadow-2xl bg-[#1E2023]  flex items-center justify-around">
+                  <div>
+                    {/* icon */}
                   <p className="text-white text-[16px] font-[400]">
                     All Tokens
                   </p>
-                  {/* adding tokens */}
+                  </div>
+                  <div className="">
+                    {/* icon */}
+                  <p className="text-white text-[16px] font-[400]">
+                    Watchlist
+                  </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -160,15 +168,15 @@ const Browser = () => {
               role="tabpanel"
               aria-labelledby="tabs-profile-tabJustify"
             >
-              <div className="pt-5 -mt-10 hidden md:inline shadow-lg">
+              <div className="shadow-lg pb-10">
                 <div className="py-5 shadow-2xl bg-[#1E2023]">
-                  <div className="flex justify-between items-center">
+                  <div className="flex items-center">
                     <p className="text-white ml-4">LAUNCHPAD</p>
-                    <div className="flex items-center">
+                    <div className="flex items-center py-1 w-[70%] mx-auto">
                       <input
                         type="text"
                         placeholder="Search..."
-                        className="bg-gray-800 px-2 rounded-full"
+                        className="bg-gray-800 px-4 rounded-full py-1 border-none outline-none text-white w-full"
                       />
                       {/* icon */}
                     </div>

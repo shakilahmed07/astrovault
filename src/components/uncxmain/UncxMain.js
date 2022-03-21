@@ -61,7 +61,7 @@ const UncxMain = () => {
         <div className="pt-5 w-6/12 -mt-10 hidden md:inline">
           <div className="text-center pb-5 shadow-2xl bg-[#151617]">
             <p className="text-white text-[16px] font-[400]">
-              Unicrypt Service
+              Astrovault Service
             </p>
             <p className="text-[12px] text-[#b9babb] font-[400]">
               For developers
