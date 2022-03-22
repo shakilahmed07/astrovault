@@ -2,8 +2,13 @@ import React from "react";
 import PresalesCard from "../../components/presales/PresalesCard";
 import LaikaDoge from "../../assets/laikadoge.jpeg";
 import Kanga from "../../assets/kanga.gif";
+import Hourse from "../../assets/hourse.svg";
+import BlueHourse from "../../assets/blue-horse.svg";
 import PerformingCard from "../../components/uncxmain/PerformingCard";
+import { HiOutlineUser } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import TokenCard from "../../components/browser/TokenCard";
+import PairsCard from "../../components/browser/PairsCard";
 
 const presales = [
   {
@@ -25,9 +30,9 @@ const presales = [
 
 const Browser = () => {
   return (
-    <div className="bg-[#151617] h-[90vh]">
-      <div className="w-8/12 mx-auto">
-        <div>
+    <div className="bg-[#151617]">
+      <div className="w-6/12 mx-auto">
+        <div className="pb-10">
           {/* main file */}
           <ul
             className="
@@ -58,6 +63,7 @@ const Browser = () => {
       px-6
       py-3
       my-2
+      active
     
     "
                 id="tabs-home-tabJustify"
@@ -111,7 +117,7 @@ const Browser = () => {
       px-6
       py-3
       my-2
-      active
+      
     "
                 id="tabs-messages-tabJustify"
                 data-bs-toggle="pill"
@@ -126,25 +132,149 @@ const Browser = () => {
           </ul>
           <div className="tab-content" id="tabs-tabContentJustify">
             <div
-              className="tab-pane fade"
-              id="tabs-messagesJustify"
+              className="tab-pane fade show active"
+              id="tabs-homeJustify"
               role="tabpanel"
-              aria-labelledby="tabs-profile-tabJustify"
+              aria-labelledby="tabs-home-tabJustify"
             >
               {/* services */}
-              <div className="pt-5 w-6/12 -mt-10 hidden md:inline shadow-lg">
-                <div className="py-[10px] shadow-2xl bg-[#1E2023]  flex items-center justify-around">
-                  <div>
-                    {/* icon */}
-                  <p className="text-white text-[16px] font-[400]">
-                    All Tokens
-                  </p>
-                  </div>
-                  <div className="">
-                    {/* icon */}
-                  <p className="text-white text-[16px] font-[400]">
-                    Watchlist
-                  </p>
+              <div className="w-10/12 mx-auto bg-[#1E2023] pb-10 rounded-xl">
+                <div>
+                  <ul
+                    class="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b border-gray-800 pl-0 mb-4"
+                    id="tabs-tabFill"
+                    role="tablist"
+                  >
+                    <li
+                      class="nav-item flex-auto text-center"
+                      role="presentation"
+                    >
+                      <a
+                        href="#tabs-homeFill"
+                        class="
+      nav-link
+      w-full
+      block
+      font-medium
+      text-xs
+      leading-tight
+      px-6
+      py-3
+      my-2
+      active
+    "
+                        id="tabs-home-tabFill"
+                        data-bs-toggle="pill"
+                        data-bs-target="#tabs-homeFill"
+                        role="tab"
+                        aria-controls="tabs-homeFill"
+                        aria-selected="true"
+                      >
+                        All tokens
+                      </a>
+                    </li>
+                    <li
+                      class="nav-item flex-auto text-center"
+                      role="presentation"
+                    >
+                      <a
+                        href="#tabs-profileFill"
+                        class="
+      nav-link
+      w-full
+      block
+      font-medium
+      text-xs
+      leading-tight
+      
+      px-6
+      py-3
+      my-2
+     
+    "
+                        id="tabs-profile-tabFill"
+                        data-bs-toggle="pill"
+                        data-bs-target="#tabs-profileFill"
+                        role="tab"
+                        aria-controls="tabs-profileFill"
+                        aria-selected="false"
+                      >
+                        Watchlist
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="tabs-tabContentFill">
+                    <div
+                      class="tab-pane fade show active"
+                      id="tabs-homeFill"
+                      role="tabpanel"
+                      aria-labelledby="tabs-home-tabFill"
+                    >
+                      {/* All Tokens */}
+                      <div className="flex items-center py-1 mx-6">
+                        <input
+                          type="text"
+                          placeholder="Taken name or address..."
+                          className="bg-black px-4 rounded-full py-2 border-none outline-none text-white w-full"
+                        />
+                        {/* icon */}
+                      </div>
+                      {/* shorting */}
+                      <div className="flex space-x-4 justify-end text-xs py-3 mr-6">
+                        <div className="flex items-center">
+                          {/* icon */}
+                          <p className="text-white">Filter</p>
+                          {/* icon */}
+                        </div>
+                        {/* icon */}
+                        <div className="flex items-center space-x-2">
+                          <p className="text-[#b9babb]">Sort</p>
+                          <p className="text-white">vol</p>
+                          {/* icon */}
+                        </div>
+                      </div>
+                      {/* group-2 */}
+                      <div className="flex items-center justify-between text-xs py-3 border-b border-t border-gray-800">
+                        <div className="flex space-x-4 ml-6">
+                          <div className="flex space-x-2 text-[#b9babb] items-center">
+                            <img src={Hourse} alt="" className="h-5" />
+                            <p>$564.45</p>
+                            {/* icon */}
+                          </div>
+                          <div className="flex space-x-2 text-[#b9babb] items-center">
+                            <img src={BlueHourse} alt="" className="h-5" />
+                            <p>$564.45</p>
+                            {/* icon */}
+                          </div>
+                        </div>
+                        <div className="flex">{/* 4 icons */}</div>
+                      </div>
+                      {/* reusable components */}
+                      <TokenCard />
+                      <TokenCard />
+                      <TokenCard />
+                      <TokenCard />
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="tabs-profileFill"
+                      role="tabpanel"
+                      aria-labelledby="tabs-profile-tabFill"
+                    >
+                      {/* Login */}
+                      <div className="flex flex-col items-center justify-center text-[#b9babb] space-y-2 h-[45vh]">
+                        <HiOutlineUser className="text-[80px]" />
+                        <p className="text-sm">
+                          Please log in in to access this section
+                        </p>
+                        <button
+                          type="submit"
+                          className="bg-purple-700 w-6/12 py-2 rounded-full"
+                        >
+                          Login
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -156,41 +286,75 @@ const Browser = () => {
               aria-labelledby="tabs-profile-tabJustify"
             >
               {/* middle Minter */}
-              <div>
-                <p className="text-white text-center">$190.47M</p>
+              <div className="bg-[#1E2023] rounded-xl">
+                <div className="flex flex-col items-center justify-center py-10">
+                  <p className="text-purple-700 text-[30px]">$190.47M</p>
+                  <p className="text-[#b9babb] text-xs">
+                    total value locked in 7099 pairs
+                  </p>
+                  <div className="flex space-x-2 py-1 mt-3 rounded-full bg-gradient-to-r from-sky-500 to-purple-900 px-10 text-white text-sm">
+                    {/* lock icon */}
+                    <p>lock</p>
+                    <p>/</p>
+                    <p>Withdraw liquidity</p>
+                  </div>
+                </div>
+                {/* search */}
+                <div className="flex items-center py-1 mx-6">
+                  <input
+                    type="text"
+                    placeholder="Pair name or address..."
+                    className="bg-black px-4 rounded-full py-2 border-none outline-none text-white w-full"
+                  />
+                  {/* icon */}
+                </div>
+                {/* short value */}
+                <div className="flex justify-end mr-6 py-2 space-x-2 text-xs">
+                  <p className="text-[#b9babb]">Sort</p>
+                  <p className="text-purple-700">Value</p>
+                  {/* icon */}
+                </div>
+                {/* forwarding */}
+                <div>{/* 4 icons */}</div>
+                {/* reusable components */}
+                <PairsCard />
+                <PairsCard />
+                <PairsCard />
+                <PairsCard />
+                <PairsCard />
+                <PairsCard />
               </div>
             </div>
             {/* launchpad */}
             <div
-              className="tab-pane fade show active"
-              id="tabs-homeJustify"
+              className="tab-pane fade"
+              id="tabs-messagesJustify"
               role="tabpanel"
-              aria-labelledby="tabs-home-tabJustify"
+              aria-labelledby="tabs-profile-tabJustify"
             >
               <div className="shadow-lg pb-10">
                 <div className="py-5 shadow-2xl bg-[#1E2023]">
                   <div className="flex items-center">
                     <p className="text-white ml-4">LAUNCHPAD</p>
-                    <div className="flex items-center py-1 w-[70%] mx-auto">
+                    <div className="flex items-center py-1 w-[60%] mx-auto">
                       <input
                         type="text"
                         placeholder="Search..."
-                        className="bg-gray-800 px-4 rounded-full py-1 border-none outline-none text-white w-full"
+                        className="bg-black px-4 rounded-full py-1 border-none outline-none text-white w-full"
                       />
                       {/* icon */}
                     </div>
                     {/* link add */}
                     <Link to="/services/launchpad/create">
-                    <p className="text-white bg-orange-400 mr-4 rounded-full px-2 cursor-pointer">
-                      Create Launch
-                    </p>
+                      <p className="text-white bg-orange-400 mr-4 rounded-full px-2 cursor-pointer">
+                        Create Launch
+                      </p>
                     </Link>
-                    
                   </div>
                   {/* agin tab bar */}
                   <div>
                     <ul
-                      class="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b-0 pl-0 mb-4"
+                      class="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b border-gray-700 pl-0 mb-4"
                       id="tabs-tabFill"
                       role="tablist"
                     >
@@ -295,7 +459,7 @@ const Browser = () => {
                       >
                         <div>
                           {/* reusable */}
-                          <div className="flex text-[#b9babb] justify-between">
+                          <div className="flex text-[#b9babb] justify-between bg-[#191B1D] py-2">
                             <p className="ml-4">2 Presales</p>
                             <div className="flex items-center space-x-4 mr-4">
                               <div>

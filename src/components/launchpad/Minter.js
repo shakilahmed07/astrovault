@@ -228,82 +228,82 @@ const Minter = () => {
                       <p className="text-white text-[14px]">
                         Fully ERC20 compliant
                       </p>
-                      <p className="text-white text-[14px] pb-10">
+                      <p className="text-white text-[14px] pb-5">
                         Fully decentralised
                       </p>
                     </div>
-                    
+
                     {open ? (
-                        <div>
-                          <div className="flex items-center justify-center space-x-2 border-2 rounded-full py-1 mr-4 cursor-pointer">
+                      <div>
+                        {/* Form */}
+                        <div className="p-4">
+                          <p className="text-white text-center pb-3">
+                            Mint your own ENMT token
+                          </p>
+                          <div className="flex flex-col space-y-2">
+                            <input
+                              type="text"
+                              placeholder="Token Name"
+                              className="text-white bg-black py-4 rounded-xl pl-4 border-none outline-none"
+                            />
+                            <input
+                              type="text"
+                              placeholder="Token Symbol"
+                              className="text-white bg-black py-4 rounded-xl pl-4 border-none outline-none"
+                            />
+                          </div>
+                          <p className="text-white text-center py-3 text-xs">
+                            Total supply (excluding decimals e.g. 100 tokens)
+                          </p>
+                          <input
+                            type="text"
+                            placeholder="Token Supply"
+                            className="text-white bg-black py-4 rounded-xl pl-4 w-full border-none outline-none"
+                          />
+                          <p className="text-white text-center py-3 text-xs">
+                            Decimals (18 recommendation)
+                          </p>
+                          <input
+                            type="text"
+                            placeholder="18"
+                            className="text-white bg-black py-4 rounded-xl pl-4 w-full border-none outline-none"
+                          />
+                          <p className="text-white text-center py-3 text-xs">
+                            Total supply (including decimals - row amount)
+                          </p>
+                          <div className="pb-3">
+                            <p className="text-white text-center pt-2">
+                              Fee: 0 ETH
+                            </p>
+                            <p className="text-[#b9babb] text-center text-xs">
+                              +0.3% total supply
+                            </p>
+                          </div>
+
+                          <button
+                            type="submit"
+                            className="text-white bg-pink-700 w-full text-center py-3 rounded-full"
+                          >
+                            Mint a new token
+                          </button>
+                          {/* <div className="flex items-center justify-center space-x-2 border-2 rounded-full py-1 mr-4 cursor-pointer">
                             <img src={Etherium} alt="" className="h-4" />
                             <p className=" text-pink-700 text-center">
                               Connect your wallet
                             </p>
-                          </div>
-                          {/* Form */}
-                          <div className="p-4">
-                            <p className="text-white text-center py-3">
-                              Mint your own ENMT token
-                            </p>
-                            <div className="flex flex-col space-y-2">
-                              <input
-                                type="text"
-                                placeholder="Token Name"
-                                className="text-white bg-black py-4 rounded-xl pl-4 border-none outline-none"
-                              />
-                              <input
-                                type="text"
-                                placeholder="Token Symbol"
-                                className="text-white bg-black py-4 rounded-xl pl-4 border-none outline-none"
-                              />
-                            </div>
-                            <p className="text-white text-center py-3 text-xs">
-                              Total supply (excluding decimals e.g. 100 tokens)
-                            </p>
-                            <input
-                              type="text"
-                              placeholder="Token Supply"
-                              className="text-white bg-black py-4 rounded-xl pl-4 w-full border-none outline-none"
-                            />
-                            <p className="text-white text-center py-3 text-xs">
-                              Decimals (18 recommendation)
-                            </p>
-                            <input
-                              type="text"
-                              placeholder="18"
-                              className="text-white bg-black py-4 rounded-xl pl-4 w-full border-none outline-none"
-                            />
-                            <p className="text-white text-center py-3 text-xs">
-                              Total supply (including decimals - row amount)
-                            </p>
-                            <div className="pb-3">
-                              <p className="text-white text-center pt-2">
-                                Fee: 0 ETH
-                              </p>
-                              <p className="text-[#b9babb] text-center text-xs">
-                                +0.3% total supply
-                              </p>
-                            </div>
-                            <button
-                              type="submit"
-                              className="text-white bg-pink-700 w-full text-center py-3 rounded-full"
-                            >
-                              Mint a new token
-                            </button>
-                          </div>
+                          </div> */}
                         </div>
-                      ) : (
-                        <div
-                          className="border-2 rounded-full py-1 mr-4 cursor-pointer"
-                          onClick={() => setOpen(true)}
-                        >
-                          <p className="text-[#b9babb] text-center">
-                            Create your own token
-                          </p>
-                        </div>
-                      )}
-                    
+                      </div>
+                    ) : (
+                      <div
+                        className="border-2 rounded-full py-1 mr-4 cursor-pointer"
+                        onClick={() => setOpen(true)}
+                      >
+                        <p className="text-[#b9babb] text-center">
+                          Create your own token
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
 
