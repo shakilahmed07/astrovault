@@ -18,7 +18,6 @@ function App() {
         <Route path="/services/minter" element={<Minter />} />
         <Route path="/services/launchpad/:Id" element={<LaunchpadDetails />} />
         <Route path="/farms" element={<Farms />} />
-
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

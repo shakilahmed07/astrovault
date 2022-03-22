@@ -4,6 +4,7 @@ import Rocket from "../../assets/rocket.svg";
 import Etherium from "../../assets/etherium.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import LaunchpadDetails from "../../components/launchpad/LaunchpadDetails";
 
 const Services = () => {
   const [open, setOpen] = useState(false);
@@ -77,7 +78,7 @@ const Services = () => {
               data-bs-target="#tabs-profileJustify"
               role="tab"
               aria-controls="tabs-profileJustify"
-              aria-selected="true"
+              aria-selected="false"
             >
               Minter
             </a>
@@ -273,7 +274,7 @@ const Services = () => {
             role="tabpanel"
             aria-labelledby="tabs-profile-tabJustify"
           >
-            {/* adding launchpad */}
+            <LaunchpadDetails />
           </div>
         </div>
       </div>

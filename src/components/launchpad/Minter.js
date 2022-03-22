@@ -4,12 +4,13 @@ import Rocket from "../../assets/rocket.svg";
 import Etherium from "../../assets/etherium.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import LaunchpadDetails from "./LaunchpadDetails";
 
 const Minter = () => {
   const [open, setOpen] = useState(false);
   return (
     <div className="bg-[#151617]">
-      <div className="pb-[40px]">
+      <div className="pb-10">
         {/* main file */}
         <ul
           className="
@@ -24,6 +25,7 @@ const Minter = () => {
   mb-4
 "
           id="tabs-tabJustify"
+          role="tablist"
         >
           <li className="nav-item flex-grow text-center" role="presentation">
             <a
@@ -43,11 +45,11 @@ const Minter = () => {
       
       
     "
-              id="tabs-home-tabJustify"
+              id="tabs-profile-tabJustify"
               data-bs-toggle="pill"
-              data-bs-target="#tabs-homeJustify"
+              data-bs-target="#tabs-profileJustify"
               role="tab"
-              aria-controls="tabs-homeJustify"
+              aria-controls="tabs-profileJustify"
               aria-selected="false"
             >
               Services
@@ -71,11 +73,11 @@ const Minter = () => {
       active
       
     "
-              id="tabs-profile-tabJustify"
+              id="tabs-home-tabJustify"
               data-bs-toggle="pill"
-              data-bs-target="#tabs-profileJustify"
+              data-bs-target="#tabs-homeJustify"
               role="tab"
-              aria-controls="tabs-profileJustify"
+              aria-controls="tabs-homeJustify"
               aria-selected="true"
             >
               Minter
@@ -103,7 +105,7 @@ const Minter = () => {
               data-bs-target="#tabs-messagesJustify"
               role="tab"
               aria-controls="tabs-messagesJustify"
-              aria-selected="false"
+              aria-selected="true"
             >
               Launchpad
             </a>
@@ -111,12 +113,86 @@ const Minter = () => {
         </ul>
         <div className="tab-content" id="tabs-tabContentJustify">
           <div
+            className="tab-pane fade"
+            id="tabs-profileJustify"
+            role="tabpanel"
+            aria-labelledby="tabs-profile-tabJustify"
+          >
+            {/* services */}
+            <div className="shadow-lg w-4/12 mx-auto">
+              <div className="text-center py-5 shadow-2xl bg-[#1E2023]">
+                <p className="text-white text-[16px] font-[400]">Our Service</p>
+              </div>
+              {/* first one */}
+              <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-800 cursor-pointer">
+                <div className="mr-2 p-2">
+                  <img src={Token} alt="" className="h-10" />
+                </div>
+                <div>
+                  <p className="text-white text-[16px] font-[400]">
+                    Token Minter
+                  </p>
+                  <p className="text-[#b9babb] text-[12px] font-[400]">
+                    ENMT tokens are fully ERC20 compliant Non-Mintable Tokens.
+                    Use the Unicrypt Token
+                  </p>
+                </div>
+              </div>
+
+              {/* third */}
+              <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-800 cursor-pointer">
+                <div className="mr-2 p-2">
+                  <img src={Rocket} alt="" className="h-10" />
+                </div>
+                <div>
+                  <p className="text-white text-[16px] font-[400]">Launchpad</p>
+                  <p className="text-[#b9babb] text-[12px] font-[400]">
+                    Raise capitial to kick start your blockchain project
+                  </p>
+                  <p className="text-[#b9babb] text-[12px] font-[400]">
+                    Decentralised presale service
+                  </p>
+                </div>
+              </div>
+              {/* four */}
+              <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-800 cursor-pointer">
+                <div className="mr-2 p-2">
+                  <img src={DocLock} alt="" className="h-10" />
+                </div>
+                <div>
+                  <p className="text-white text-[16px] font-[400]">
+                    Token Minter
+                  </p>
+                  <p className="text-[#b9babb] text-[12px] font-[400]">
+                    ENMT tokens are fully ERC20 compliant Non-Mintable Tokens.
+                    Use the Unicrypt Token
+                  </p>
+                </div>
+              </div>
+              {/* five */}
+              <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-800 cursor-pointer">
+                <div className="mr-2 p-2">
+                  <img src={DocLock} alt="" className="h-10" />
+                </div>
+                <div>
+                  <p className="text-white text-[16px] font-[400]">
+                    Token Minter
+                  </p>
+                  <p className="text-[#b9babb] text-[12px] font-[400]">
+                    ENMT tokens are fully ERC20 compliant Non-Mintable Tokens.
+                    Use the Unicrypt Token
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
             className="tab-pane fade show active"
             id="tabs-homeJustify"
             role="tab"
             aria-labelledby="tabs-home-tabJustify"
           >
-            {/* services */}
+            {/* middle Minter */}
             <div className="w-10/12 mx-auto">
               <div className="flex justify-between mt-10">
                 <div className="shadow-lg w-5/12 mx-auto">
@@ -156,8 +232,8 @@ const Minter = () => {
                         Fully decentralised
                       </p>
                     </div>
-                    <div className="space-y-5">
-                      {open ? (
+                    
+                    {open ? (
                         <div>
                           <div className="flex items-center justify-center space-x-2 border-2 rounded-full py-1 mr-4 cursor-pointer">
                             <img src={Etherium} alt="" className="h-4" />
@@ -227,98 +303,23 @@ const Minter = () => {
                           </p>
                         </div>
                       )}
-                    </div>
+                    
                   </div>
                 </div>
 
                 {/* right side connect wallet */}
                 <div className="w-5/12 mx-auto">
-                  <div className="flex justify-center border-2 rounded-full py-1 mr-4 mb-5 cursor-pointer">
-                    <img src={Rocket} alt="" className="h-5" />
+                  <div className="border-2 rounded-full py-1 mr-4 mb-5 cursor-pointer">
                     <p className="text-[#b9babb] text-center">
                       Connect your wallet
                     </p>
                   </div>
                   <Link to="/services/launchpad/create">
                     <div className="flex items-center justify-center space-x-2 border-2 rounded-full py-1 mr-4 cursor-pointer">
-                      <img src={Rocket} alt="" className="h-5" />
+                      <img src={Etherium} alt="" className="h-4" />
                       <p className="text-pink-700">Launch your own token!</p>
                     </div>
                   </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="tab-pane fade"
-            id="tabs-profileJustify"
-            role="tabpanel"
-            aria-labelledby="tabs-profile-tabJustify"
-          >
-            {/* middle Minter */}
-            <div className="shadow-lg w-4/12 mx-auto">
-              <div className="text-center py-5 shadow-2xl bg-[#1E2023]">
-                <p className="text-white text-[16px] font-[400]">Our Service</p>
-              </div>
-              {/* first one */}
-              <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-800 cursor-pointer">
-                <div className="mr-2 p-2">
-                  <img src={Token} alt="" className="h-10" />
-                </div>
-                <div>
-                  <p className="text-white text-[16px] font-[400]">
-                    Token Minter
-                  </p>
-                  <p className="text-[#b9babb] text-[12px] font-[400]">
-                    ENMT tokens are fully ERC20 compliant Non-Mintable Tokens.
-                    Use the Unicrypt Token
-                  </p>
-                </div>
-              </div>
-
-              {/* third */}
-              <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-800 cursor-pointer">
-                <div className="mr-2 p-2">
-                  <img src={Rocket} alt="" className="h-10" />
-                </div>
-                <div>
-                  <p className="text-white text-[16px] font-[400]">Launchpad</p>
-                  <p className="text-[#b9babb] text-[12px] font-[400]">
-                    Raise capitial to kick start your blockchain project
-                  </p>
-                  <p className="text-[#b9babb] text-[12px] font-[400]">
-                    Decentralised presale service
-                  </p>
-                </div>
-              </div>
-              {/* four */}
-              <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-800 cursor-pointer">
-                <div className="mr-2 p-2">
-                  <img src={DocLock} alt="" className="h-10" />
-                </div>
-                <div>
-                  <p className="text-white text-[16px] font-[400]">
-                    Token Minter
-                  </p>
-                  <p className="text-[#b9babb] text-[12px] font-[400]">
-                    ENMT tokens are fully ERC20 compliant Non-Mintable Tokens.
-                    Use the Unicrypt Token
-                  </p>
-                </div>
-              </div>
-              {/* five */}
-              <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-800 cursor-pointer">
-                <div className="mr-2 p-2">
-                  <img src={DocLock} alt="" className="h-10" />
-                </div>
-                <div>
-                  <p className="text-white text-[16px] font-[400]">
-                    Token Minter
-                  </p>
-                  <p className="text-[#b9babb] text-[12px] font-[400]">
-                    ENMT tokens are fully ERC20 compliant Non-Mintable Tokens.
-                    Use the Unicrypt Token
-                  </p>
                 </div>
               </div>
             </div>
@@ -329,7 +330,7 @@ const Minter = () => {
             role="tabpanel"
             aria-labelledby="tabs-profile-tabJustify"
           >
-            {/* adding launchpad */}
+            <LaunchpadDetails />
           </div>
         </div>
       </div>

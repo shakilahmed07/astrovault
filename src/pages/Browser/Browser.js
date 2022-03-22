@@ -58,8 +58,7 @@ const Browser = () => {
       px-6
       py-3
       my-2
-      
-      active
+    
     "
                 id="tabs-home-tabJustify"
                 data-bs-toggle="pill"
@@ -112,7 +111,7 @@ const Browser = () => {
       px-6
       py-3
       my-2
-     
+      active
     "
                 id="tabs-messages-tabJustify"
                 data-bs-toggle="pill"
@@ -127,10 +126,10 @@ const Browser = () => {
           </ul>
           <div className="tab-content" id="tabs-tabContentJustify">
             <div
-              className="tab-pane fade show active"
-              id="tabs-homeJustify"
+              className="tab-pane fade"
+              id="tabs-messagesJustify"
               role="tabpanel"
-              aria-labelledby="tabs-home-tabJustify"
+              aria-labelledby="tabs-profile-tabJustify"
             >
               {/* services */}
               <div className="pt-5 w-6/12 -mt-10 hidden md:inline shadow-lg">
@@ -163,10 +162,10 @@ const Browser = () => {
             </div>
             {/* launchpad */}
             <div
-              className="tab-pane fade"
-              id="tabs-messagesJustify"
+              className="tab-pane fade show active"
+              id="tabs-homeJustify"
               role="tabpanel"
-              aria-labelledby="tabs-profile-tabJustify"
+              aria-labelledby="tabs-home-tabJustify"
             >
               <div className="shadow-lg pb-10">
                 <div className="py-5 shadow-2xl bg-[#1E2023]">
