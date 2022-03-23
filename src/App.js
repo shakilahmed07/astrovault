@@ -13,11 +13,11 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/browser" element={<Browser />} />
-        <Route path="/services/*" element={<Services />} />
-        <Route path="/services/minter" element={<Minter />} />
-        <Route path="/services/launchpad/:Id" element={<LaunchpadDetails />} />
-        <Route path="/farms" element={<Farms />} />
+        <Route path="browser" element={<Browser />} />
+        <Route path="services/*" element={<Services />} />
+        <Route path="services/minter" element={<Minter />} />
+        <Route path="services/launchpad/:Id" element={<LaunchpadDetails />} />
+        <Route path="farms" element={<Farms />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

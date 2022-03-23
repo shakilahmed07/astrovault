@@ -9,15 +9,14 @@ import LaunchpadDetails from "../../components/launchpad/LaunchpadDetails";
 const Services = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="bg-[#151617] h-screen">
-      <div className="">
+    <div className="bg-[#151617]">
+      <div className="pb-10">
         {/* main file */}
         <ul
           className="
-            w-4/12 mx-auto
+            md:w-4/12 md:mx-auto
   nav nav-tabs nav-justified
-  flex flex-col
-  md:flex-row
+  flex
   flex-wrap
   list-none
   border-b-0
@@ -119,7 +118,7 @@ const Services = () => {
             aria-labelledby="tabs-home-tabJustify"
           >
             {/* services */}
-            <div className="shadow-lg w-4/12 mx-auto">
+            <div className="shadow-lg md:w-4/12 md:mx-auto p-2 md:p-0">
               <div className="text-center py-5 shadow-2xl bg-[#1E2023]">
                 <p className="text-white text-[16px] font-[400]">Our Service</p>
               </div>
@@ -193,9 +192,9 @@ const Services = () => {
             aria-labelledby="tabs-profile-tabJustify"
           >
             {/* middle Minter */}
-            <div className="w-10/12 mx-auto">
-              <div className="flex justify-between mt-10">
-                <div className="shadow-lg w-5/12 mx-auto">
+            <div className="md:w-10/12 md:mx-auto">
+              <div className="md:flex md:justify-between md:mt-10">
+                <div className="shadow-lg md:w-5/12 md:mx-auto p-2 md:p-0">
                   <div className="py-5 shadow-2xl bg-[#1E2023]">
                     <p className="text-white text-[16px] font-[400] pl-5">
                       ENMT Token Minter
@@ -233,26 +232,83 @@ const Services = () => {
                       </p>
                     </div>
                     <div className="space-y-5">
-                      {open ? (
-                        <div className="border-2 rounded-full py-1 mr-4">
-                          <p className="text-[#b9babb] text-center">
-                            Create your own token
+                    {open ? (
+                      <div>
+                        {/* Form */}
+                        <div className="p-4">
+                          <p className="text-white text-center pb-3">
+                            Mint your own ENMT token
                           </p>
+                          <div className="flex flex-col space-y-2">
+                            <input
+                              type="text"
+                              placeholder="Token Name"
+                              className="text-white bg-black py-4 rounded-xl pl-4 border-none outline-none"
+                            />
+                            <input
+                              type="text"
+                              placeholder="Token Symbol"
+                              className="text-white bg-black py-4 rounded-xl pl-4 border-none outline-none"
+                            />
+                          </div>
+                          <p className="text-white text-center py-3 text-xs">
+                            Total supply (excluding decimals e.g. 100 tokens)
+                          </p>
+                          <input
+                            type="text"
+                            placeholder="Token Supply"
+                            className="text-white bg-black py-4 rounded-xl pl-4 w-full border-none outline-none"
+                          />
+                          <p className="text-white text-center py-3 text-xs">
+                            Decimals (18 recommendation)
+                          </p>
+                          <input
+                            type="text"
+                            placeholder="18"
+                            className="text-white bg-black py-4 rounded-xl pl-4 w-full border-none outline-none"
+                          />
+                          <p className="text-white text-center py-3 text-xs">
+                            Total supply (including decimals - row amount)
+                          </p>
+                          <div className="pb-3">
+                            <p className="text-white text-center pt-2">
+                              Fee: 0 ETH
+                            </p>
+                            <p className="text-[#b9babb] text-center text-xs">
+                              +0.3% total supply
+                            </p>
+                          </div>
+
+                          <button
+                            type="submit"
+                            className="text-white bg-pink-700 w-full text-center py-3 rounded-full"
+                          >
+                            Mint a new token
+                          </button>
+                          {/* <div className="flex items-center justify-center space-x-2 border-2 rounded-full py-1 mr-4 cursor-pointer">
+                            <img src={Etherium} alt="" className="h-4" />
+                            <p className=" text-pink-700 text-center">
+                              Connect your wallet
+                            </p>
+                          </div> */}
                         </div>
-                      ) : (
-                        <div className="flex items-center justify-center space-x-2 border-2 rounded-full py-1 mr-4 cursor-pointer"
+                      </div>
+                    ) : (
+                      <div
+                        className="border-2 rounded-full py-1 mr-4 cursor-pointer"
                         onClick={() => setOpen(true)}
-                        >
-                          <img src={Etherium} alt="" className="h-4" />
-                          <p className="text-pink-700">Connect your wallet</p>
-                        </div>
-                      )}
+                      >
+                        <p className="text-[#b9babb] text-center">
+                          Create your own token
+                        </p>
+                      </div>
+                    )}
                     </div>
                   </div>
                 </div>
 
                 {/* right side connect wallet */}
-                <div className="w-5/12 mx-auto">
+                <div className="md:w-5/12 md:mx-auto mt-5">
                   <div className="border-2 rounded-full py-1 mr-4 mb-5 cursor-pointer">
                     <p className="text-[#b9babb] text-center">
                       Connect your wallet

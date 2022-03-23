@@ -4,10 +4,10 @@ import Etherium from "../../assets/etherium.png";
 const LaunchpadDetails = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="bg-[#151617] h-screen">
-      <div className="w-10/12 mx-auto">
-        <div className="flex justify-between pt-10">
-          <div className="w-5/12 mx-auto text-center">
+    <div className="bg-[#151617] md:h-screen">
+      <div className="md:w-10/12 md:mx-auto">
+        <div className="md:flex md:justify-between md:pt-10 p-2 md:p-0">
+          <div className="md:w-5/12 md:mx-auto text-center">
             <div className="bg-gradient-to-r from-cyan-800 to-blue-400 rounded-lg">
               <div className="space-y-2 py-[30px]">
                 <p className="text-white text-[16px] font-[500] pl-5">
@@ -34,15 +34,15 @@ const LaunchpadDetails = () => {
                 </div>
               </div>
             </div>
-            <div className="flex mt-5 items-center justify-center space-x-2 border-2 rounded-full py-1 cursor-pointer">
+            <div className="flex mt-5 items-center justify-center space-x-2 border-2 rounded-full py-1 cursor-pointer my-10">
               <img src={Etherium} alt="" className="h-4" />
               <p className="text-[#b9babb]">Connect your wallet</p>
             </div>
           </div>
 
           {/* right side connect wallet */}
-          <div className="w-5/12 mx-auto bg-[#454649] p-2 rounded-lg">
-            <p className="text-[#b9babb] pb-2 pl-4">Create your presale</p>
+          <div className="md:w-5/12 md:mx-auto bg-[#454649] p-2 rounded-lg">
+            <p className="text-[#b9babb] pb-2 pl-4 mt-5">Create your presale</p>
             {open ? (
               <div className="p-4">
               <p className="text-white pb-3">Token address</p>
@@ -67,7 +67,7 @@ const LaunchpadDetails = () => {
               <p className="text-white py-3">ETH/?</p>
             </div>
             ) : (
-              <div className="flex items-center justify-center space-x-2 border-2 rounded-full mt-3 mr-4 cursor-pointer mx-4"
+              <div className="flex items-center justify-center space-x-2 border-2 rounded-full my-10 mr-4 cursor-pointer mx-4"
               onClick={() => setOpen(true)}
               >
                 <img src={Etherium} alt="" className="h-4" />

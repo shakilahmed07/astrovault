@@ -8,7 +8,7 @@ import PerformingCard from "../../components/uncxmain/PerformingCard";
 import { HiOutlineUser } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import TokenCard from "../../components/browser/TokenCard";
-import PairsCard from "../../components/browser/PairsCard";
+import LocksCard from "../../components/uncxmain/LocksCard"
 
 const presales = [
   {
@@ -31,14 +31,13 @@ const presales = [
 const Browser = () => {
   return (
     <div className="bg-[#151617]">
-      <div className="w-6/12 mx-auto">
+      <div className="md:w-6/12 md:mx-auto">
         <div className="pb-10">
           {/* main file */}
           <ul
             className="
   nav nav-tabs nav-justified
-  flex flex-col
-  md:flex-row
+  flex
   flex-wrap
   list-none
   border-b-0
@@ -138,10 +137,10 @@ const Browser = () => {
               aria-labelledby="tabs-home-tabJustify"
             >
               {/* services */}
-              <div className="w-10/12 mx-auto bg-[#1E2023] pb-10 rounded-xl">
+              <div className="md:w-10/12 md:mx-auto bg-[#1E2023] pb-10 rounded-xl">
                 <div>
                   <ul
-                    class="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b border-gray-800 pl-0 mb-4"
+                    class="nav nav-tabs flex flex-wrap list-none border-b border-gray-800 pl-0 mb-4"
                     id="tabs-tabFill"
                     role="tablist"
                   >
@@ -211,11 +210,11 @@ const Browser = () => {
                       aria-labelledby="tabs-home-tabFill"
                     >
                       {/* All Tokens */}
-                      <div className="flex items-center py-1 mx-6">
+                      <div className="flex items-center py-1 md:mx-6 mx-2">
                         <input
                           type="text"
                           placeholder="Taken name or address..."
-                          className="bg-black px-4 rounded-full py-2 border-none outline-none text-white w-full"
+                          className="bg-black px-4 rounded-full py-4 border-none outline-none text-white w-full"
                         />
                         {/* icon */}
                       </div>
@@ -262,14 +261,14 @@ const Browser = () => {
                       aria-labelledby="tabs-profile-tabFill"
                     >
                       {/* Login */}
-                      <div className="flex flex-col items-center justify-center text-[#b9babb] space-y-2 h-[45vh]">
+                      <div className="flex flex-col items-center justify-center text-white space-y-2 h-[45vh]">
                         <HiOutlineUser className="text-[80px]" />
                         <p className="text-sm">
                           Please log in in to access this section
                         </p>
                         <button
                           type="submit"
-                          className="bg-purple-700 w-6/12 py-2 rounded-full"
+                          className="bg-purple-700 md:w-6/12 w-10/12 py-2 rounded-full "
                         >
                           Login
                         </button>
@@ -300,11 +299,11 @@ const Browser = () => {
                   </div>
                 </div>
                 {/* search */}
-                <div className="flex items-center py-1 mx-6">
+                <div className="flex items-center py-1 md:mx-6 mx-2">
                   <input
                     type="text"
                     placeholder="Pair name or address..."
-                    className="bg-black px-4 rounded-full py-2 border-none outline-none text-white w-full"
+                    className="bg-black px-4 rounded-full py-4 border-none outline-none text-white w-full"
                   />
                   {/* icon */}
                 </div>
@@ -317,12 +316,12 @@ const Browser = () => {
                 {/* forwarding */}
                 <div>{/* 4 icons */}</div>
                 {/* reusable components */}
-                <PairsCard />
-                <PairsCard />
-                <PairsCard />
-                <PairsCard />
-                <PairsCard />
-                <PairsCard />
+                <LocksCard />
+                <LocksCard />
+                <LocksCard />
+                <LocksCard />
+                <LocksCard />
+                <LocksCard />
               </div>
             </div>
             {/* launchpad */}
@@ -335,8 +334,8 @@ const Browser = () => {
               <div className="shadow-lg pb-10">
                 <div className="py-5 shadow-2xl bg-[#1E2023]">
                   <div className="flex items-center">
-                    <p className="text-white ml-4">LAUNCHPAD</p>
-                    <div className="flex items-center py-1 w-[60%] mx-auto">
+                    <p className="text-white ml-4 hidden md:inline">LAUNCHPAD</p>
+                    <div className="flex items-center py-1 md:w-[60%] mx-auto">
                       <input
                         type="text"
                         placeholder="Search..."
@@ -346,7 +345,7 @@ const Browser = () => {
                     </div>
                     {/* link add */}
                     <Link to="/services/launchpad/create">
-                      <p className="text-white bg-orange-400 mr-4 rounded-full px-2 cursor-pointer">
+                      <p className="text-white bg-orange-400 mr-4 rounded-full py-1 px-4 cursor-pointer">
                         Create Launch
                       </p>
                     </Link>
@@ -354,7 +353,7 @@ const Browser = () => {
                   {/* agin tab bar */}
                   <div>
                     <ul
-                      class="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b border-gray-700 pl-0 mb-4"
+                      class="nav nav-tabs flex flex-wrap list-none border-b border-gray-700 pl-0 mb-4"
                       id="tabs-tabFill"
                       role="tablist"
                     >
@@ -477,9 +476,9 @@ const Browser = () => {
                           <div>
                             <div>
                               {/* cart item */}
-                              <div className="relative z-10 flex flex-col justify-center">
+                              <div className="relative z-10 flex md:flex-col justify-center">
                                 <div className="absolute border border-gray-800 w-full -z-10 -mt-[60px] hidden md:inline" />
-                                <div className="md:columns-2 columns-3 my-5">
+                                <div className="columns-2 my-5 space-x-8">
                                   {presales.map((item) => (
                                     <PresalesCard
                                       key={item}
@@ -492,7 +491,7 @@ const Browser = () => {
                                 </div>
                               </div>
                             </div>
-                            <div className="columns-2">
+                            <div className="md:columns-2">
                               <PerformingCard />
                               <PerformingCard />
                             </div>

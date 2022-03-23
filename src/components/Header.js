@@ -4,6 +4,7 @@ import { MdLocalFireDepartment } from "react-icons/md";
 import { RiUserShared2Line } from "react-icons/ri";
 import { BiSun } from "react-icons/bi";
 import { FaTelegramPlane } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -29,7 +30,7 @@ const Header = () => {
           
         </div>
         <Link to="/services">
-        <p className="hover:bg-[#c1d0fc] px-[16px] py-2 rounded-full cursor-pointer hidden md:inline">
+        <p className="hover:bg-[#454649] px-[16px] py-2 rounded-full cursor-pointer hidden md:inline">
           SERVICES
         </p>
         </Link>
@@ -43,15 +44,16 @@ const Header = () => {
        
         
         <p className="hover:bg-[#454649] px-[16px] py-2 rounded-full cursor-pointer hidden md:inline">DOCS</p>
-        <div className="hover:bg-[#454649] px-4 py-2 rounded-full cursor-pointer">
-          <FaTelegramPlane className="h-6 w-6" />
+        <div className="py-2 rounded-full cursor-pointer flex">
+          <GiHamburgerMenu className="h-6 w-6 md:hidden" />
+          <FaTelegramPlane className="h-6 w-6 ml-5" />
         </div>
       </div>
       {/* connect wallet */}
       <div className="flex items-center md:justify-center text-white">
         <div className="bg-[#454649] flex items-center md:px-[16px] px-[25px] py-2 rounded-full md:h-[36px] md:min-w-[60px] cursor-pointer">
           <img src={Etherium} alt="" className="w-5 h-5" />
-          <p className="mx-2">Connect</p>
+          <p className="mx-2 pr-2">Connect</p>
         </div>
         <div className="ml-4 hover:bg-[#454649] p-[10px] rounded-full cursor-pointer">
           <RiUserShared2Line />
