@@ -8,7 +8,7 @@ import { HiDocumentText, HiUser } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
 import { FiMessageSquare } from "react-icons/fi";
 
-const PerformingCard = () => {
+const PerformingCard = ({images, title}) => {
   return (
     <div className="bg-[#1E2023] p-4 rounded-xl shadow-md mb-2">
       {/* top */}
@@ -32,11 +32,11 @@ const PerformingCard = () => {
       <div>
         <div className="flex items-center justify-between">
           <div className="flex">
-          <img src={Progetto} alt="" className="h-[60px] rounded-full" />
+          <img src={images} alt="" className="h-[60px] rounded-full" />
           {/* moon */}
           <div className="ml-5 space-y-2">
             <div className="flex items-center justify-center -ml-[90px]">
-              <p className="text-white font-[700]">OverMoon</p>
+              <p className="text-white font-[700]">{title}</p>
               <MdKeyboardArrowUp className="text-[#b9babb]" />
               <div className="text-[#b9babb] flex space-x-1">
                 <BsTwitter className="text-sm" />

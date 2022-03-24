@@ -3,9 +3,123 @@ import BlueHorse from "../../assets/blue-horse.svg";
 import DocLock from "../../assets/doc-lock.svg";
 import Token from "../../assets/token.svg";
 import Rocket from "../../assets/rocket.svg";
+import Progetto from "../../assets/Progetto-senza-titolo-73-2.png";
+import NoImoji from "../../assets/no-icon.png";
+import Etherium from "../../assets/etherium.png";
+import Plot from "../../assets/plot.png";
+import Usdt from "../../assets/usdt.png";
+import Peace from "../../assets/peace.jpeg";
+import Square from "../../assets/square.png";
 import PerformingCard from "./PerformingCard";
 import { IoMdLock } from "react-icons/io";
 import LocksCard from "./LocksCard";
+import ServiceCard from "./ServiceCard";
+
+const Performing = [
+  {
+    id: 1,
+    images: Progetto,
+    title: "OverMoon",
+  },
+  {
+    id: 2,
+    images: Plot,
+    title: "PLOT",
+  },
+  {
+    id: 3,
+    images: Progetto,
+    title: "MOON",
+  },
+];
+
+const Services = [
+  {
+    id: 1,
+    images: Token,
+    title: "Documentation",
+    subTitle: "Read about all of our services",
+  },
+  {
+    id: 2,
+    images: DocLock,
+    title: "Liquidity Locker",
+    subTitle: "Lock Liquidity tokens",
+  },
+  {
+    id: 3,
+    images: Token,
+    title: "Token Locker",
+    subTitle: "Lock your ERC20 team tokens",
+  },
+  {
+    id: 4,
+    images: DocLock,
+    title: "Token Minter",
+    subTitle:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum consequuntur",
+  },
+  {
+    id: 5,
+    images: Rocket,
+    title: "LaunchPad",
+    subTitle:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum consequuntur",
+  },
+];
+
+const locks = [
+  {
+    id: 1,
+    imoji: Usdt,
+    imojiTitle: "USDT",
+    coin: NoImoji,
+    coinTitle: "MFT",
+    coinPrice: 107,
+    coinDays: "(75.5%) next in 4 days",
+    Liquidity: 142,
+  },
+  {
+    id: 2,
+    imoji: Peace,
+    imojiTitle: "WINU",
+    coin: Square,
+    coinTitle: "ETH",
+    coinPrice: 330,
+    coinDays: "(97.2%) next in a month",
+    Liquidity: 123,
+  },
+  {
+    id: 3,
+    imoji: NoImoji,
+    imojiTitle: "TITAN",
+    coin: Etherium,
+    coinTitle: "ETH",
+    coinPrice: 107,
+    coinDays: "(89.5%) next in 3 days",
+    Liquidity: 339,
+  },
+  {
+    id: 4,
+    imoji: NoImoji,
+    imojiTitle: "PUFA",
+    coin: Etherium,
+    coinTitle: "ETH",
+    coinPrice: 648,
+    coinDays: "(89.5%) next in 3 days",
+    Liquidity: 744,
+  },
+  {
+    id: 5,
+    imoji: NoImoji,
+    imojiTitle: "LLTH",
+    coin: Etherium,
+    coinTitle: "ETH",
+    coinPrice: 107,
+    coinDays: "(99.5%) next in a month",
+    Liquidity: 149,
+  },
+];
 
 const UncxMain = () => {
   return (
@@ -33,13 +147,17 @@ const UncxMain = () => {
           {/* barchart */}
           {/* right div */}
           <div className="py-5">
-            <p className="text-white text-center font-[600] text-[20px] mb-2">
+            <p className="text-white text-center font-[600] text-[20px] mb-3">
               Recent Top performing ILO's
             </p>
             {/* component */}
-            <PerformingCard />
-            <PerformingCard />
-            <PerformingCard />
+            {Performing.map((item) => (
+              <PerformingCard
+                key={item}
+                images={item.images}
+                title={item.title}
+              />
+            ))}
           </div>
 
           {/* New Liquidity Locks */}
@@ -49,17 +167,23 @@ const UncxMain = () => {
               <p>New Liquidity Locks (>100k)</p>
             </div>
             {/* component */}
-            <LocksCard />
-            <LocksCard />
-            <LocksCard />
-            <LocksCard />
-            <LocksCard />
-            <LocksCard />
+            {locks.map((item) => (
+              <LocksCard
+                key={item}
+                imoji={item.imoji}
+                imojiTitle={item.imojiTitle}
+                coin={item.coin}
+                coinTitle={item.coinTitle}
+                coinPrice={item.coinPrice}
+                coinDays={item.coinDays}
+                Liquidity={item.Liquidity}
+              />
+            ))}
           </div>
         </div>
         {/* right side */}
         <div className="pt-5 w-6/12 -mt-10 hidden md:inline">
-          <div className="text-center pb-5 shadow-2xl bg-[#151617]">
+          <div className="text-center py-5 shadow-2xl bg-[#03101d]">
             <p className="text-white text-[16px] font-[400]">
               Astrovault Service
             </p>
@@ -67,74 +191,15 @@ const UncxMain = () => {
               For developers
             </p>
           </div>
-          {/* first one */}
-          <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-700">
-            <div className="mr-2 p-2">
-              <img src={DocLock} alt="" className="h-10" />
-            </div>
-            <div>
-              <p className="text-white text-[16px] font-[400]">Documentation</p>
-              <p className="text-[#b9babb] text-[12px] font-[400]">
-                Read about all of our services
-              </p>
-            </div>
-          </div>
-          {/* second */}
-          <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-700">
-            <div className="mr-2 p-2">
-              <img src={DocLock} alt="" className="h-10" />
-            </div>
-            <div>
-              <p className="text-white text-[16px] font-[400]">
-                Liquidity Locker
-              </p>
-              <p className="text-[#b9babb] text-[12px] font-[400]">
-                Lock Liquidity tokens
-              </p>
-            </div>
-          </div>
-          {/* third */}
-          <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-700">
-            <div className="mr-2 p-2">
-              <img src={DocLock} alt="" className="h-10" />
-            </div>
-            <div>
-              <p className="text-white text-[16px] font-[400]">Token Locker</p>
-              <p className="text-[#b9babb] text-[12px] font-[400]">
-                Lock your ERC20 team tokens
-              </p>
-              <p className="text-[#b9babb] text-[12px] font-[400]">
-                send tokens to someone else that are locked for a configurable
-              </p>
-            </div>
-          </div>
-          {/* four */}
-          <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4 border-b border-gray-700">
-            <div className="mr-2 p-2">
-              <img src={Token} alt="" className="h-10" />
-            </div>
-            <div>
-              <p className="text-white text-[16px] font-[400]">TOken Minter</p>
-              <p className="text-[#b9babb] text-[12px] font-[400]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-                nulla esse officia, porro facilis consectetur!
-              </p>
-            </div>
-          </div>
-          {/* five */}
-          <div className="flex items-center hover:bg-[#22272C] bg-[#1E2023] py-4">
-            <div className="mr-2 p-2">
-              <img src={Rocket} alt="" className="h-10" />
-            </div>
-            <div>
-              <p className="text-white text-[16px] font-[400]">LaunchPad</p>
-              <p className="text-[#b9babb] text-[12px] font-[400]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-                harum ratione totam consectetur laborum, culpa fugiat ipsum
-                pariatur minima facilis.
-              </p>
-            </div>
-          </div>
+          {/* map */}
+          {Services.map((items) => (
+            <ServiceCard
+              key={items}
+              images={items.images}
+              title={items.title}
+              subTitle={items.subTitle}
+            />
+          ))}
         </div>
       </div>
     </div>
